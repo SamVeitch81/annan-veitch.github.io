@@ -36,7 +36,7 @@ Only if you promise not to use my real name. "Beatrice of the Bog" will do nicel
 
 Click or tap the images to view full-size.
 
-![Badger standing on grass](https://upload.wikimedia.org/wikipedia/commons/6/6f/Badger.jpg "Badger standing on grass")
+![Badger standing on grass](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/Badger%203.png "Badger standing on grass")
 
 ![European badger close-up](https://upload.wikimedia.org/wikipedia/commons/9/9a/European_Badger_%28Meles_meles%29.jpg "European badger close-up")
 
