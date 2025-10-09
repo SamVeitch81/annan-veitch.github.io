@@ -38,9 +38,9 @@ Click or tap the images to view full-size.
 
 ![Badger standing on grass](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/Badger%203.png "Badger standing on grass")
 
-![European badger close-up](https://upload.wikimedia.org/wikipedia/commons/9/9a/European_Badger_%28Meles_meles%29.jpg "European badger close-up")
+![European badger close-up](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/Badger%204.png "European badger close-up")
 
-![Badger foraging at dusk](https://upload.wikimedia.org/wikipedia/commons/f/f6/Meles_meles_-_Badger_%28photo%29.jpg "Badger foraging at dusk")
+![Badger foraging at dusk](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/image_9119b88675d84609b8d1c898ed4c7fa2.png "Badger foraging at dusk")
 
 > **Note** Images are from Wikimedia Commons and are used as public illustrations; replace with your own photos if you prefer.
 
