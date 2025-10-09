@@ -1,92 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Project</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Badger Banter</title>
+  <meta name="description" content="A small, comical personal page featuring Alf and Bea the badgers" />
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; }
-    h1, h2, h3 { color: #333; }
-    pre { background: #f4f4f4; padding: 1rem; overflow-x: auto; }
-    code { background: #eee; padding: 0.2rem 0.4rem; }
+    :root{
+      --bg:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --max:900px;
+      --card:#f8fafc; --code:#f3f4f6; --border:#e6e9ee;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111827; background:linear-gradient(180deg,#fbfdff 0%,#fff 100%);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:32px; display:flex; align-items:flex-start; justify-content:center;
+    }
+    .container{width:100%; max-width:var(--max); background:var(--card); border:1px solid var(--border);
+      border-radius:12px; padding:28px; box-shadow:0 8px 30px rgba(15,23,42,0.06)}
+    header{margin-bottom:18px}
+    h1{margin:0 0 6px 0; font-size:clamp(22px,3vw,32px)}
+    .lede{color:var(--muted); margin:0 0 16px 0}
+    hr{border:0;border-top:1px solid var(--border); margin:20px 0}
+    h2{font-size:18px; margin:18px 0 12px 0}
+    p{line-height:1.6; margin:8px 0}
+    strong{color:#0f172a}
+    .conversation{background:#fff; padding:14px; border-radius:8px; border:1px solid #eef2f7}
+    .msg{margin:10px 0}
+    .speaker{font-weight:700; display:block; color:#0f172a}
+    .speaker .role{font-weight:700}
+    blockquote{background:#f1f5f9; padding:12px 14px; border-left:4px solid var(--accent); margin:12px 0; border-radius:6px}
+    .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:8px}
+    .gallery figure{margin:0; background:#fff; border-radius:8px; overflow:hidden; border:1px solid var(--border)}
+    .gallery img{width:100%; height:160px; object-fit:cover; display:block}
+    figcaption{padding:8px 10px; font-size:13px; color:var(--muted)}
+    ul{margin:8px 0 12px 20px}
+    pre{background:var(--code); padding:12px; border-radius:6px; overflow:auto; font-family:Menlo,Monaco,monospace; font-size:13px}
+    footer{margin-top:22px; color:var(--muted); font-size:13px; text-align:center}
+    .meta{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
+    .pill{background:#fff; border:1px solid var(--border); padding:6px 8px; border-radius:999px; font-size:13px; color:var(--muted)}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    @media (max-width:520px){ body{padding:18px} .container{padding:18px} .gallery img{height:130px} }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Project</h1>
-  <p>This is the homepage. Below is the README content:</p>
+  <main class="container" role="main" aria-labelledby="title">
+    <header>
+      <h1 id="title">Badger Banter</h1>
+      <p class="lede"><strong>Welcome</strong> to a tiny corner of the internet where two badgers argue about snacks, hats, and minor celebrity.</p>
+    </header>
 
-<---
-title: "Badger Banter"
-description: "A small, comical personal page featuring Alf and Bea the badgers"
-layout: default
----
+    <hr />
 
-# Badger Banter
+    <section aria-labelledby="conversation">
+      <h2 id="conversation">Conversation</h2>
 
-**Welcome** to a tiny corner of the internet where two badgers argue about snacks, hats, and minor celebrity.
+      <div class="conversation" aria-live="polite">
+        <div class="msg">
+          <span class="speaker">Alf — the one with suspiciously neat stripes</span>
+          <p>Evening. I dug up a treasure chest of worms. It came with an instruction leaflet in Latin. Should I read it aloud?</p>
+        </div>
 
----
+        <div class="msg">
+          <span class="speaker">Bea — connoisseur of compost and dramatic pauses</span>
+          <p>Only if it contains a recipe. Otherwise, hum the national anthem of the hedgehogs and eat first, ask questions later.</p>
+        </div>
 
-## Conversation
+        <div class="msg">
+          <span class="speaker">Alf</span>
+          <p>I once tried wearing a top hat. The worms applauded. The owl took notes. I think I'm on the verge of fame.</p>
+        </div>
 
-**Alf** — the one with suspiciously neat stripes  
-Evening. I dug up a treasure chest of worms. It came with an instruction leaflet in Latin. Should I read it aloud?
+        <div class="msg">
+          <span class="speaker">Bea</span>
+          <p>Fame is overrated. Fame means autograph requests at 3am and fewer comfortable burrows. Stay earthy, Alf.</p>
+        </div>
 
-**Bea** — connoisseur of compost and dramatic pauses  
-Only if it contains a recipe. Otherwise, hum the national anthem of the hedgehogs and eat first, ask questions later.
+        <div class="msg">
+          <span class="speaker">Alf</span>
+          <p>Fair. But if you become famous, will you mention me in your inevitable memoir, <em>From Sett to Stardom</em>?</p>
+        </div>
 
-**Alf**  
-I once tried wearing a top hat. The worms applauded. The owl took notes. I think I'm on the verge of fame.
+        <div class="msg">
+          <span class="speaker">Bea</span>
+          <p>Only if you promise not to use my real name. "Beatrice of the Bog" will do nicely.</p>
+        </div>
+      </div>
+    </section>
 
-**Bea**  
-Fame is overrated. Fame means autograph requests at 3am and fewer comfortable burrows. Stay earthy, Alf.
+    <hr />
 
-**Alf**  
-Fair. But if you become famous, will you mention me in your inevitable memoir, *From Sett to Stardom*?
+    <section aria-labelledby="gallery">
+      <h2 id="gallery">Gallery</h2>
+      <p class="lede">Click or tap the images to view full-size.</p>
 
-**Bea**  
-Only if you promise not to use my real name. "Beatrice of the Bog" will do nicely.
+      <div class="gallery" role="list">
+        <figure role="listitem">
+          <a href="https://raw.githubusercontent.com/SamVeitch81/annan-veitch.github.io/main/website/Badger%203.png" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/SamVeitch81/annan-veitch.github.io/main/website/Badger%203.png" alt="Badger standing on grass" />
+          </a>
+          <figcaption>Badger standing on grass</figcaption>
+        </figure>
 
----
+        <figure role="listitem">
+          <a href="https://raw.githubusercontent.com/SamVeitch81/annan-veitch.github.io/main/website/Badger%204.png" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/SamVeitch81/annan-veitch.github.io/main/website/Badger%204.png" alt="European badger close-up" />
+          </a>
+          <figcaption>European badger close-up</figcaption>
+        </figure>
 
-## Gallery
+        <figure role="listitem">
+          <a href="https://raw.githubusercontent.com/SamVeitch81/annan-veitch.github.io/main/website/image_9119b88675d84609b8d1c898ed4c7fa2.png" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/SamVeitch81/annan-veitch.github.io/main/website/image_9119b88675d84609b8d1c898ed4c7fa2.png" alt="Badger foraging at dusk" />
+          </a>
+          <figcaption>Badger foraging at dusk</figcaption>
+        </figure>
+      </div>
 
-Click or tap the images to view full-size.
+      <blockquote>
+        <strong>Note</strong> Images are from Wikimedia Commons and are used as public illustrations; replace with your own photos if you prefer.
+      </blockquote>
+    </section>
 
-![Badger standing on grass](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/Badger%203.png "Badger standing on grass")
+    <hr />
 
-![European badger close-up](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/Badger%204.png "European badger close-up")
+    <section aria-labelledby="quickinfo">
+      <h2 id="quickinfo">Quick Info</h2>
+      <ul>
+        <li><strong>Author</strong>: Sam</li>
+        <li><strong>Purpose</strong>: Personal, humorous micro-site</li>
+        <li><strong>License</strong>: Content created by Sam; images credited to Wikimedia Commons</li>
+      </ul>
+    </section>
 
-![Badger foraging at dusk](https://github.com/SamVeitch81/annan-veitch.github.io/blob/main/website/image_9119b88675d84609b8d1c898ed4c7fa2.png "Badger foraging at dusk")
+    <hr />
 
-> **Note** Images are from Wikimedia Commons and are used as public illustrations; replace with your own photos if you prefer.
+    <section aria-labelledby="extras">
+      <h2 id="extras">Fun Extras</h2>
+      <ul>
+        <li>Add a small script to append a chat line every few seconds for whimsy.</li>
+        <li>Convert each message into illustrated comic panels for a printable zine.</li>
+        <li>Turn the gallery into an autoplay slideshow for a more dynamic homepage.</li>
+      </ul>
+    </section>
 
----
-
-## Quick Info
-
-- **Author**: Sam  
-- **Purpose**: Personal, humorous micro-site  
-- **License**: Content created by Sam; images credited to Wikimedia Commons
-
----
-
-## Fun Extras
-
-- Add a small script to append a chat line every few seconds for whimsy.  
-- Convert each message into illustrated comic panels for a printable zine.  
-- Turn the gallery into an autoplay slideshow for a more dynamic homepage.
-
----
-
-© 2025 Badger Banter>
-
-  <h2>About</h2>
-  <p>This project does XYZ...</p>
-  <h2>Installation</h2>
-  <pre><code>npm install</code></pre>
-  <h2>Usage</h2>
-  <pre><code>npm start</code></pre>
+    <footer>
+      <div class="meta">
+        <span class="pill">© 2025 Badger Banter</span>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
-
